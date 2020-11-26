@@ -22,6 +22,7 @@ body {
     background-color: #ffffff;
     color: var(--primary-text-color);
 
+    font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -38,7 +39,7 @@ a {
     text-decoration: none;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p, a {
     margin: 0;
 }
 
@@ -52,13 +53,26 @@ button {
     cursor: pointer;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;
     width: 1170px;
     padding-left: 15px;
     padding-right: 15px;
-    outline: 2px solid blue;
 }
 
 .section-title {
@@ -74,11 +88,23 @@ button {
 
 .nav {
     display: flex;
+    align-items: center;
 }
 
 .logo {
-    display: flex;
-    align-items: center;   
+    display: block;
+
+    color: var(--accent-color);
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.92;
+}
+
+.logo>.black {
+    color: var(--title-color) ;
 }
 
 .nav-site {
@@ -89,8 +115,8 @@ button {
 
 .nav-site .link {
     display: block;
-    padding-top: 31px;
-    padding-bottom: 31px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
     color: var(--title-color);
 
@@ -129,6 +155,7 @@ button {
 }
 
 .auth-link .link {
+
     color: var(--primary-text-color);
 
     font-style: normal;
@@ -151,24 +178,25 @@ button {
 
 .hero-container {
     text-align: center;
-    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 .hero-title {
     display: block;
-    padding-top: 200px;
-    padding-bottom: 30px;
-
+    
     color: var(--title-color-white);
 
     font-size: 44px;
     font-weight: 900;
-    line-height: 1.36;
+    line-height: 1.37;
     text-transform: uppercase;
+    letter-spacing: 0.06em;
 }
 
 .button.primary {
     display: inline-block;
+    margin-top: 30px;
     padding: 10px 32px;
     border-radius: 4px;
     min-width: 200px;
@@ -184,7 +212,7 @@ button {
     text-align: center;
 }
 
-/* Наши работы*/
+/* Наши преимущества*/
 
 .our-work-list {
     display: flex;
@@ -206,7 +234,8 @@ button {
     
     font-size: 14px;
     font-weight: 700;
-    line-height: 1.14;
+    line-height: 16px;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
 }
 
@@ -215,19 +244,20 @@ button {
 
     font-size: 14px;
     font-weight: 400;
-    line-height: 1.71;
+    line-height: 24px;
+    letter-spacing: 0.03em;
 }
 
-.our-exemple {
-    padding-top: 106px;
-    padding-bottom: 82px;
-    outline: auto;
+/* Наши работы*/
+.container.work-exemple {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .our-work-exemple {
     display: flex;
     justify-content: space-between;
-    padding-top: 50px; 
+    margin-top: 50px;
 }
 
 .our-work-exemple>.img:not(:last-child) {
@@ -249,13 +279,40 @@ button {
     padding-bottom: 94px;
 }
 
-
-.team-list {
-    display: flex;
-    outline: 2px solid red;
+.team-title{
+    margin-bottom: 50px;
 }
 
-.team-list .name {
+
+.team-items {
+    display: flex;
+}
+
+.team-items>.card {
+    width: 270px;
+    margin-right: 30px;
+    background: #FFFFFF;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team-items>.card:last-child {
+    margin-right: 0px;
+}
+
+.card-text {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+
+}
+
+.team-items .name {
+    margin-bottom: 10px;
+
     color: var(--title-color);
 
     font-size: 16px;
@@ -263,7 +320,7 @@ button {
     line-height: 1.18;
 }
 
-.team-list .profession {
+.team-items .profession {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.18;
@@ -273,6 +330,19 @@ button {
 
 .footer {
     background-color: #2F303A;
+}
+
+.footer-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.logo>.white {
+    color: var(--title-color-white);
+}
+
+.contact {
+    margin-top: 20px;
 }
 
 .contact a {
@@ -285,15 +355,18 @@ button {
 
 .contact .address {
     color: var(--title-color-white);
+    margin-top: 9px;
 }
 
 .contact .contact-link {
     color: var(--address-color);
+    margin-top: 9px;
 }
 
 /* ----------Страница - ПОРТФОЛИО -------------------------------------------------------*/
 .container-projects {
-    margin-top: 96px;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 

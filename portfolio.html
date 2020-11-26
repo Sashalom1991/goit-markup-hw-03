@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/modern-normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>WebStudio</title>
@@ -11,7 +12,7 @@
 <body>
     <header class="header">
        <nav class="nav container">
-           <a class="logo"> <img src="./image/WebStudio.png" alt="logo"></a>
+           <a class="logo">Web<span class="black">Studio</span></a>
 
            <ul class="nav-site">
             <li class="item"><a class="link" href="./index.html">Студия</a></li>
@@ -27,9 +28,9 @@
        </nav>
     </header>
     <main>
-        <section class="section projects">
+        <section class="section ">
             <div class="container container-projects">
-                <h1 class="projects-title">Каталог</h1>
+                <h1 class="projects-title visually-hidden">Каталог</h1>
                 
                     <!-- Радиокнопки групировки работ-->
                     <ul class="container-btn">
@@ -89,7 +90,7 @@
 
                     <li class="item"><a href="">
                         <img class="img-content" src="./image/Издание_Limited_Edition.png" alt="Издание Limited Edition" width="370">
-                        <div class="list-content>
+                        <div class="list-content">
                             <h2 class="our-projects-title">Издание Limited Edition</h2>
                             <p class="our-projects-cat">Дизайн</p> 
                         </div>
@@ -117,14 +118,16 @@
         </section>
     </main>
     <footer class="footer">
-        <a><img src="./image/WebStudio_light.png" alt="light logo"></a>
-        <address class="contact">
-           <ul>
-            <li><a class="address" href="#">г. Киев, пр-т Леси Украинки, 26</a></li>
-            <li><a class="contact-link" href="mailto:info@example.com">info@example.com</a></li>
-            <li><a class="contact-link" href="tel:+380961111111">+38 096 111 11 11</a></li>
-            </ul> 
-        </address>
+        <div class="container footer-container">
+            <a class="logo">Web<span class="white">Studio</span></a>
+            <address>
+            <ul class="contact">
+                <li><a class="address" href="#">г. Киев, пр-т Леси Украинки, 26</a></li>
+                <li><a class="contact-link" href="mailto:info@example.com">info@example.com</a></li>
+                <li><a class="contact-link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                </ul> 
+            </address>  
+        </div>
     </footer>
 </body>
 </html>

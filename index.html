@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/modern-normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     
     <title>WebStudio</title>
 </head>
 <body>
-    <header>
-        <nav class="nav container">
-           <a class="logo"> <img src="./image/WebStudio.png" alt="logo"></a>
+    <header class="header">
+       <nav class="nav container">
+           <a class="logo">Web<span class="black">Studio</span></a>
 
            <ul class="nav-site">
             <li class="item"><a class="link current" href="">Студия</a></li>
-            <li class="item"><a class="link" href="./portfolio.html">Портфолио</a></li>
+            <li class="item"><a class="link " href="./portfolio.html">Портфолио</a></li>
             <li class="item"><a class="link" href="">Контакты</a></li>
            </ul>
 
@@ -34,51 +35,64 @@
                 <a class="button primary btn-hero" href="#">Заказать услугу</a>  
             </div>
         </section>
-
+        
+        <!-- наши преимущества-->
         <section class="section">
-            <div class="container our-work">
+            <div class="container">
                 <ul class="our-work-list">
                     <li class="item"><h3 class="our-work-subtitle">Внимание к деталям</h3><p class="our-work-text">Идейные соображения, а также начало повседневной работы по формированию позиции.</li>
-                    <li class="item"><h3 class="our-work-subtitle">Пунктуальность</h3><p class="our-work-text">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</listi>
-                    <li class="item"><h3 class="our-work-subtitle">Планирование</h3><p class="our-work-text">Равным образом консультация с широким активом в значительной степени обуславливает.</listi>
+                    <li class="item"><h3 class="our-work-subtitle">Пунктуальность</h3><p class="our-work-text">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</li>
+                    <li class="item"><h3 class="our-work-subtitle">Планирование</h3><p class="our-work-text">Равным образом консультация с широким активом в значительной степени обуславливает.</li>
                     <li class="item"><h3 class="our-work-subtitle">Современные технологии</h3><p class="our-work-text">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p></li>
                 </ul>
-
-                <div class="our-exemple">
-                    <h2 class="section-title">Чем мы занимаемся</h2>
-                    <ul class="our-work-exemple">
-                        <li class="img"><a href="#"><img src="./image/box1.png" alt="верстка" width="370"></a></li>
-                        <li class="img"><a href="#"><img src="./image/box2.png" alt="адаптация" width="370"></a></li>
-                        <li class="img"><a href="#"><img src="./image/box3.png" alt="дизайн" width="370"></a></li>
-                    </ul> 
-                </div>
-                
             </div>  
         </section>
-
+        <!--Наши работы -->
+        <section class="section">
+            <div class="container work-exemple">
+              <h2 class="section-title">Чем мы занимаемся</h2>        
+                <ul class="our-work-exemple">
+                <li class="img"><a href="#"><img src="./image/box1.png" alt="верстка" width="370"></a></li>
+                <li class="img"><a href="#"><img src="./image/box2.png" alt="адаптация" width="370"></a></li>
+                <li class="img"><a href="#"><img src="./image/box3.png" alt="дизайн" width="370"></a></li>
+                </ul>  
+            </div>
+        </section>        
+                
+        <!-- Наша команда -->
         <section class="section team">
             <div class="container team-container">
                 <h2 class="section-title team-title">Наша команда</h2>
-                <ul class="team-list">
-                    <li>
+                <ul class="team-items">
+                    <li class="card">
                         <img src="./image/Демьяненко.jpg" alt="Игорь Демьяненко" width="270">
-                        <p class="name"><b>Игорь Демьяненко</b></p>
-                        <p class="profession">Product Designer</p>
+                        <div class="card-text">
+                            <p class="name"><b>Игорь Демьяненко</b></p>
+                            <p class="profession">Product Designer</p>
+                        </div>
                     </li>
-                    <li>
+                    <li class="card">
                         <img src="./image/Репина.jpg" alt="Ольга Репина" width="270">
-                        <p class="name"><b>Ольга Репина</b></p>
-                        <p class="profession">Frontend Developer</p>
+                        <div class="card-text">
+                            <p class="name"><b>Ольга Репина</b></p>
+                            <p class="profession">Frontend Developer</p> 
+                        </div>
                     </li>
-                    <li>
-                        <img src="./image/Тарасов.jpg" alt="Николай Тарасов" width="270"> 
-                        <p class="name"><b>Николай Тарасов</b></p>
-                        <p class="profession">Marketing</p>
+                    <li class="card">
+                        <img src="./image/Тарасов.jpg" alt="Николай Тарасов" width="270">
+                        <div class="card-text">
+                            <p class="name"><b>Николай Тарасов</b></p>
+                            <p class="profession">Marketing</p>
+                        </div> 
+                        
                     </li>
-                    <li>
+                    <li class="card">
                         <img src="./image/Ермаков.jpg" alt="Михаил Ермаков" width="270">
-                        <p class="name"><b>Михаил Ермаков</b></p>
-                        <p class="profession">UI Designer</p>
+                        <div class="card-text">
+                            <p class="name"><b>Михаил Ермаков</b></p>
+                            <p class="profession">UI Designer</p>
+                        </div>
+                        
                     </li>
                 </ul> 
             </div>
@@ -86,8 +100,8 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <a><img src="./image/WebStudio_light.png" alt="light logo"></a>
+        <div class="container footer-container">
+            <a class="logo">Web<span class="white">Studio</span></a>
             <address>
             <ul class="contact">
                 <li><a class="address" href="#">г. Киев, пр-т Леси Украинки, 26</a></li>
