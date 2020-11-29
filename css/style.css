@@ -113,10 +113,14 @@ button {
     margin-left: 93px;
 }
 
-.nav-site .link {
-    display: block;
+.nav-site .item {
     padding-top: 32px;
     padding-bottom: 32px;
+}
+
+    
+.nav-site .link {
+    display: block;    
 
     color: var(--title-color);
 
@@ -173,6 +177,7 @@ button {
 /* Главная часть, Герой*/
 
 .hero {
+    width: 100%;
     background-color: #2F303A;
 }
 
@@ -329,7 +334,9 @@ button {
 /* Подвал */
 
 .footer {
+    width: 100%;
     background-color: #2F303A;
+
 }
 
 .footer-container {
